@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    git test-1 branch test
+    git test-1 branch test , merge test
   </div>
 </template>
 
