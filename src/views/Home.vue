@@ -12,7 +12,11 @@
     <div class="stap-3">
 
     </div>
-    <div class="stap-4"></div>
+    <div class="stap-4">
+      <span style="position:absolute; left:-10px;z-index:10;">
+      asdasdasd
+      </span>
+    </div>
     <div class="stap-5">
       <div class="stap-5-1"></div>
       <div class="stap-5-2"></div>
@@ -99,7 +103,7 @@ export default {
     z-index:9;
   }
   .stap-4 {
-    width: 100px;
+    width: 200px;
     height: 100px;
     position: absolute;
     background-color: blue;
