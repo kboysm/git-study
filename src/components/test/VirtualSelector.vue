@@ -15,4 +15,12 @@
         border-radius: 50%;
         content: '';
     }
+    .test::after {
+        content: 'SALE!';
+        color: #fff;
+        background-color: red;
+        border-radius: 10%;
+        padding: 5px 10px 5px 10px;
+        margin-left: 5px;
+    }
 </style>
