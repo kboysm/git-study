@@ -1,19 +1,19 @@
 <template>
   <div>
     <!-- <file-shape></file-shape>-->
-    <virtual-selector></virtual-selector>
+    <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute>
   </div>
 </template>
 
 <script>
 import FileShape from '@/components/test/FileShape.vue'
-import VirtualSelector from '@/components/test/VirtualSelector.vue'
+import VirtualSelectorAndCustomAttribute from '@/components/test/VirtualSelectorAndCustomAttribute.vue'
 
 export default {
   name: 'Home',
   components: {
     FileShape,
-    VirtualSelector
+    VirtualSelectorAndCustomAttribute
   }
 }
 </script>
