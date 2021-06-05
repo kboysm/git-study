@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <!-- <side-navbar></side-navbar> -->
-    <div class="inline">
-      <router-view/>
-    </div>
+    <!-- <header>asd</header> -->
+      <side-navbar></side-navbar>
+      <!-- <div class="container">
+        <router-view/>
+      </div> -->
   </div>
 </template>
 <script>

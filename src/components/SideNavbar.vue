@@ -1,18 +1,41 @@
 <template>
-    <div class="col-lg-2 col-1 navBg pl-0 pr-0">
-        <nav class="nav  navbar-toggleable-sm border-0">
-            <div class="navbar  flex-column mt-md-0  pt-md-0  p-0 w-100" id="navbarWEX">
-                <h1>Logo</h1>
-                <a href="" class="nav-link"><b-icon-reception3></b-icon-reception3><span>Dashboard </span></a>
-                <a href="" class="nav-link"><b-icon-folder2></b-icon-folder2><span>Media</span></a>
-                <a href="" class="nav-link"><b-icon-people-fill></b-icon-people-fill><span>Pages</span></a>
-                <a href="" class="nav-link"><b-icon-volume-up-fill></b-icon-volume-up-fill><span>Comments</span></a>
-
-                <small>Taha Cankurt</small>
-            </div>
-        </nav>
-    </div>
+    <b-sidebar text-variant="white" bg-variant="dark" class="bg-dark text-white" v-model="showSidebar" no-header>
+      <b-row>
+        <b-col>
+          title
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          section-1
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          section-2
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          section-3
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          section-4
+        </b-col>
+      </b-row>
+    </b-sidebar>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      showSidebar: true,
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 h1,
 a {
