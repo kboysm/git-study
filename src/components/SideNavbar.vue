@@ -1,30 +1,25 @@
 <template>
-    <b-sidebar text-variant="white" bg-variant="dark" class="bg-dark text-white" v-model="showSidebar" no-header>
-      <b-row>
-        <b-col>
+    <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
+      <div class="side-bar">
+        <div class="side-bar-title side-bar-opt">
           title
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col>
-          section-1
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col>
-          section-2
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col>
-          section-3
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col>
-          section-4
-        </b-col>
-      </b-row>
+        </div>
+        <div class="side-bar-item side-bar-opt">
+          article
+        </div>
+        <div class="side-bar-item side-bar-opt">
+          article
+        </div>
+        <div class="side-bar-item side-bar-opt">
+          article
+        </div>
+        <div class="side-bar-item side-bar-opt">
+          article
+        </div>
+        <div class="side-bar-item side-bar-opt">
+          article
+        </div>
+      </div>
     </b-sidebar>
 </template>
 <script>
@@ -32,6 +27,26 @@ export default {
   data() {
     return {
       showSidebar: true,
+      width: 0,
+    }
+  },
+  created() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+  destroyed() {
+      window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+      handleResize() {
+          this.width = window.innerWidth;
+      }
+  },
+  computed: {
+    updateWidth() {
+      if( this.width > 1280 ) return '300px'
+      
+      return '100px'
     }
   }
 }
