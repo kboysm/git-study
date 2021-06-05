@@ -2,23 +2,21 @@
     <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
       <div class="side-bar">
         <div class="side-bar-title side-bar-opt">
-          title
+          <b-avatar size="lg"></b-avatar><span>테스트스토리</span>
         </div>
         <div class="side-bar-item side-bar-opt">
-          article
+          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
         </div>
         <div class="side-bar-item side-bar-opt">
-          article
+          <b-icon-exclamation-circle-fill class="h1"></b-icon-exclamation-circle-fill> <span> 테스트1 </span>
         </div>
         <div class="side-bar-item side-bar-opt">
-          article
+          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
         </div>
         <div class="side-bar-item side-bar-opt">
-          article
+          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
         </div>
-        <div class="side-bar-item side-bar-opt">
-          article
-        </div>
+
       </div>
     </b-sidebar>
 </template>
@@ -52,88 +50,23 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-h1,
-a {
-  width: 100%;
-}
-h1 {
-  border-right: 1px solid #34495e;
-}
-body {
-  height: 100%;
-}
-.navBg {
-  background-color: gray;
-  max-width: 196px;
-  height: 100vh;
-  nav {
-    h1 {
-      color: #34495e;
-      font-size: 24px;
-      font-weight: 300;
-      padding: 25px 12px;
-      background-color: white;
+  .side-bar {
+    padding-left: 25px;
+    .side-bar-title {
+      height: 100px;
+      margin-top:20px;
     }
-    a {
-      transition: 0.6s;
-      padding-bottom: 15px;
-      padding-top: 15px;
-      color: white;
-      font-weight: 300;
-      &:hover {
-        color: green;
-        border-right: 3px solid green;
-        i {
-          color: #34495e;
-        }
-      }
+    .side-bar-opt {
+      height: 40px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin-bottom: 15px;
+      cursor: pointer;
     }
-    i {
-      padding-right: 10px;
-    }
-    small {
-      color: white;
-      text-align: center;
-      margin-top: 15px;
+    .side-bar-opt:hover::after {
+      border: 1px solid red;
+      content: 'asdasdasd'
     }
   }
-}
-@media (max-width: 767px) {
-  .navBg {
-    height: 100%;
-    nav {
-      padding-top: 0px;
-    }
-  }
-}
-@media (max-width: 576px) {
-  .navBg {
-    height: 100vh;
-    max-width: 55px;
-    nav {
-      padding-top: 0px;
-      h1 {
-        display: none;
-      }
-      a {
-        text-align: center;
-      }
-      i {
-        padding-right: 0px;
-      }
-      span {
-        display: none;
-      }
-    }
-  }
-}
-@media screen and (max-height: 600px) {
-  .navBg {
-    height: 100%;
-    nav {
-      padding-top: 0px;
-    }
-  }
-}
-
 </style>
