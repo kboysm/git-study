@@ -1,37 +1,38 @@
 <template>
-    <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
+    <b-sidebar fixed="top" :no-close-on-route-change="showSidebar" text-variant="white" :width="updateWidth" v-model="showSidebar" bg-variant="dark" no-header>
       <div class="side-bar">
-        <b-nav class="side-bar-title side-bar-opt">
-          <div class="side-bar-icon">
+        <b-nav class="side-bar-item side-bar-opt">
+          <b-nav-item class="side-bar-title side-bar-opt">
+            <div class="side-bar-icon">
             <b-avatar size="lg"></b-avatar>
           </div>
           <div class="title">테스트스토리</div>
+          </b-nav-item>
+          <b-nav-item class="side-bar-item side-bar-opt" to="/testOnePage" exact exact-active-class="active">
+            <div class="side-bar-icon">
+              <b-icon-x class="h2"></b-icon-x>
+            </div>
+            <div class="title">테스트1</div>
+          </b-nav-item>
+          <b-nav-item class="side-bar-item side-bar-opt" to="/testTwoPage"  exact-active-class="active">
+            <div class="side-bar-icon">
+              <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
+            </div>
+            <div class="title"> 테스트2 </div>
+          </b-nav-item>
+          <b-nav-item class="side-bar-item side-bar-opt" to="/testThreePage"  exact-active-class="active">
+            <div class="side-bar-icon">
+              <b-icon-x class="h2"></b-icon-x>
+            </div>
+            <div class="title"> 테스트3 </div>
+          </b-nav-item>
+          <b-nav-item class="side-bar-item side-bar-opt" to="/testFourPage"  exact-active-class="active">
+            <div class="side-bar-icon">
+              <b-icon-x class="h2"></b-icon-x> 
+            </div>
+            <div class="title"> 테스트4 </div>
+          </b-nav-item>
         </b-nav>
-        <b-nav class="side-bar-item side-bar-opt active exact">
-          <div class="side-bar-icon">
-            <b-icon-x class="h2"></b-icon-x>
-          </div>
-          <div class="title">테스트1</div>
-        </b-nav>
-        <b-nav class="side-bar-item side-bar-opt">
-          <div class="side-bar-icon">
-            <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
-          </div>
-          <div class="title"> 테스트1 </div>
-        </b-nav>
-        <b-nav class="side-bar-item side-bar-opt">
-          <div class="side-bar-icon">
-            <b-icon-x class="h2"></b-icon-x>
-          </div>
-           <div class="title"> 테스트1 </div>
-        </b-nav>
-        <b-nav class="side-bar-item side-bar-opt">
-          <div class="side-bar-icon">
-            <b-icon-x class="h2"></b-icon-x> 
-          </div>
-          <div class="title"> 테스트1 </div>
-        </b-nav>
-
       </div>
     </b-sidebar>
 </template>
@@ -40,7 +41,7 @@ export default {
   data() {
     return {
       showSidebar: true,
-      width: 0,
+      width: '250px',
     }
   },
   created() {
@@ -68,7 +69,6 @@ export default {
 $sidebar-default-padding-left: 25px;
 $sidebar-active-default-color: #5EBDC5;
   .side-bar {
-    
     .side-bar-title {
       height: 90px;
       margin-top:20px;

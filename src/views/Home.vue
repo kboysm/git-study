@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <file-shape></file-shape>-->
-    <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute>
+    <!-- <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute> -->
   </div>
 </template>
 
