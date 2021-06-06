@@ -128,7 +128,9 @@ $sidebar-active-default-color: #5EBDC5;
   }
   @media screen and (max-width: 1280px) {
     .side-bar {
-      padding-left: 0;
+      .nav {
+        height: 100% !important;
+      }
       .side-bar-title {
         height: 90px;
         display: flex;
@@ -148,7 +150,7 @@ $sidebar-active-default-color: #5EBDC5;
         margin-bottom: 0;
         padding-left: 0;
       }
-      .active::after {
+      .active::before {
         display: none;
       }
     }
