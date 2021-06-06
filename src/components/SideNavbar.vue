@@ -13,7 +13,7 @@
           <b-nav-item to="/testOnePage" link-classes="link-text-color" exact-active-class="active">
           <div class="side-bar-item side-bar-opt w-100">
             <div class="side-bar-icon">
-              <b-icon-x class="h2"></b-icon-x>
+              <b-icon-bar-chart-fill class="h2"></b-icon-bar-chart-fill>
             </div>
             <div class="title font-weight-bold">테스트1</div>
           </div>
@@ -21,7 +21,7 @@
           <b-nav-item link-classes="link-text-color" to="/testTwoPage"  exact-active-class="active">
             <div class="side-bar-item side-bar-opt w-100">
               <div class="side-bar-icon">
-                <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
+                <b-icon-folder2 class="h2"></b-icon-folder2> 
               </div>
               <div class="title font-weight-bold"> 테스트2 </div>
             </div>
@@ -29,7 +29,7 @@
           <b-nav-item link-classes="link-text-color" to="/testThreePage"  exact-active-class="active">
             <div class="side-bar-item side-bar-opt w-100">
               <div class="side-bar-icon">
-                <b-icon-x class="h2"></b-icon-x>
+                <b-icon-people-fill class="h2"></b-icon-people-fill>
               </div>
               <div class="title font-weight-bold"> 테스트3 </div>
             </div>
@@ -37,7 +37,7 @@
           <b-nav-item link-classes="link-text-color" to="/testFourPage"  exact-active-class="active">
             <div class="side-bar-item side-bar-opt w-100">
               <div class="side-bar-icon">
-                <b-icon-x class="h2"></b-icon-x> 
+                <b-icon-volume-up-fill class="h2"></b-icon-volume-up-fill> 
               </div>
               <div class="title font-weight-bold"> 테스트4 </div>
             </div>

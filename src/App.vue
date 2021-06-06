@@ -1,9 +1,9 @@
 <template>
   <div id="app">
       <side-navbar></side-navbar>
+      <main-header></main-header>
       <div class="responsive-width">
         <div class="container-fluid">
-          <main-header></main-header>
             <router-view/>
         </div>
       </div>
