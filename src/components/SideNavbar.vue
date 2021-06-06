@@ -2,19 +2,34 @@
     <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
       <div class="side-bar">
         <div class="side-bar-title side-bar-opt">
-          <b-avatar size="lg"></b-avatar><span>테스트스토리</span>
+          <div>
+            <b-avatar size="lg"></b-avatar>
+          </div>
+          <div class="title">테스트스토리</div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
+          <div>
+            <b-icon-x class="h2"></b-icon-x>
+          </div>
+          <div class="title">테스트1</div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <b-icon-exclamation-circle-fill class="h1"></b-icon-exclamation-circle-fill> <span> 테스트1 </span>
+          <div>
+            <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
+          </div>
+          <div class="title"> 테스트1 </div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
+          <div>
+            <b-icon-x class="h2"></b-icon-x>
+          </div>
+           <div class="title"> 테스트1 </div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <b-icon-x class="h1"></b-icon-x> <span> 테스트1 </span>
+          <div>
+            <b-icon-x class="h2"></b-icon-x> 
+          </div>
+          <div class="title"> 테스트1 </div>
         </div>
 
       </div>
@@ -42,7 +57,7 @@ export default {
   },
   computed: {
     updateWidth() {
-      if( this.width > 1280 ) return '300px'
+      if( this.width > 1280 ) return '250px'
       
       return '100px'
     }
@@ -53,20 +68,49 @@ export default {
   .side-bar {
     padding-left: 25px;
     .side-bar-title {
-      height: 100px;
+      height: 90px;
       margin-top:20px;
+      margin-bottom:20px;
+      padding:10px;
+    }
+    .title {
+      margin-left: 8px;
+    }
+    .side-bar-item {
+      height: 50px;
     }
     .side-bar-opt {
-      height: 40px;
       display: flex;
       justify-content: left;
       align-items: center;
-      margin-bottom: 15px;
       cursor: pointer;
     }
-    .side-bar-opt:hover::after {
+    .side-bar-opt:hover {
       border: 1px solid red;
-      content: 'asdasdasd'
+      // content: 'asdasdasd'
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .side-bar {
+      padding-left: 0;
+      .side-bar-title {
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        .title {
+          display: none;
+        }
+      }
+      .title {
+        margin-left: 0;
+      }
+      .side-bar-opt {
+        height: 100px;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 0;
+        border: 1px solid red;
+      }
     }
   }
 </style>
