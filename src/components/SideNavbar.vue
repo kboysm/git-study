@@ -2,31 +2,31 @@
     <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
       <div class="side-bar">
         <div class="side-bar-title side-bar-opt">
-          <div>
+          <div class="side-bar-icon">
             <b-avatar size="lg"></b-avatar>
           </div>
           <div class="title">테스트스토리</div>
         </div>
-        <div class="side-bar-item side-bar-opt">
-          <div>
+        <div class="side-bar-item side-bar-opt active">
+          <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x>
           </div>
           <div class="title">테스트1</div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <div>
+          <div class="side-bar-icon">
             <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
           </div>
           <div class="title"> 테스트1 </div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <div>
+          <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x>
           </div>
            <div class="title"> 테스트1 </div>
         </div>
         <div class="side-bar-item side-bar-opt">
-          <div>
+          <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x> 
           </div>
           <div class="title"> 테스트1 </div>
@@ -65,8 +65,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+$sidebar-default-padding-left: 25px;
+$sidebar-active-default-color: #5EBDC5;
   .side-bar {
-    padding-left: 25px;
+    
     .side-bar-title {
       height: 90px;
       margin-top:20px;
@@ -76,6 +78,10 @@ export default {
     .title {
       margin-left: 8px;
     }
+    .side-bar-icon {
+      display: flex;
+      align-items: center;
+    }
     .side-bar-item {
       height: 50px;
     }
@@ -84,10 +90,22 @@ export default {
       justify-content: left;
       align-items: center;
       cursor: pointer;
+      padding-left: 25px;
     }
-    .side-bar-opt:hover {
-      border: 1px solid red;
-      // content: 'asdasdasd'
+    // .side-bar-opt:hover {
+    //   border: 1px solid $sidebar-active-default-color;
+    // }
+    .active {
+      color: $sidebar-active-default-color;
+    }
+    .active::after {
+      position:absolute;
+      right: 0;
+      width:2px;
+      height: 50px;
+      content:'';
+      border: 2px solid $sidebar-active-default-color;
+      color:$sidebar-active-default-color;
     }
   }
   @media screen and (max-width: 1280px) {
@@ -109,7 +127,11 @@ export default {
         justify-content: center;
         flex-direction: column;
         margin-bottom: 0;
+        padding-left: 0;
         border: 1px solid red;
+      }
+      .active::after {
+        display: none;
       }
     }
   }
