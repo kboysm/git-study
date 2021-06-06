@@ -1,36 +1,36 @@
 <template>
     <b-sidebar text-variant="white" :width="updateWidth" bg-variant="dark" v-model="showSidebar" no-header>
       <div class="side-bar">
-        <div class="side-bar-title side-bar-opt">
+        <b-nav class="side-bar-title side-bar-opt">
           <div class="side-bar-icon">
             <b-avatar size="lg"></b-avatar>
           </div>
           <div class="title">테스트스토리</div>
-        </div>
-        <div class="side-bar-item side-bar-opt active">
+        </b-nav>
+        <b-nav class="side-bar-item side-bar-opt active exact">
           <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x>
           </div>
           <div class="title">테스트1</div>
-        </div>
-        <div class="side-bar-item side-bar-opt">
+        </b-nav>
+        <b-nav class="side-bar-item side-bar-opt">
           <div class="side-bar-icon">
             <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
           </div>
           <div class="title"> 테스트1 </div>
-        </div>
-        <div class="side-bar-item side-bar-opt">
+        </b-nav>
+        <b-nav class="side-bar-item side-bar-opt">
           <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x>
           </div>
            <div class="title"> 테스트1 </div>
-        </div>
-        <div class="side-bar-item side-bar-opt">
+        </b-nav>
+        <b-nav class="side-bar-item side-bar-opt">
           <div class="side-bar-icon">
             <b-icon-x class="h2"></b-icon-x> 
           </div>
           <div class="title"> 테스트1 </div>
-        </div>
+        </b-nav>
 
       </div>
     </b-sidebar>
@@ -105,7 +105,7 @@ $sidebar-active-default-color: #5EBDC5;
       height: 50px;
       content:'';
       border: 2px solid $sidebar-active-default-color;
-      color:$sidebar-active-default-color;
+      background-color:$sidebar-active-default-color;
     }
   }
   @media screen and (max-width: 1280px) {
@@ -115,6 +115,7 @@ $sidebar-active-default-color: #5EBDC5;
         height: 90px;
         display: flex;
         justify-content: center;
+        padding: 0;
         .title {
           display: none;
         }
@@ -128,7 +129,6 @@ $sidebar-active-default-color: #5EBDC5;
         flex-direction: column;
         margin-bottom: 0;
         padding-left: 0;
-        border: 1px solid red;
       }
       .active::after {
         display: none;
