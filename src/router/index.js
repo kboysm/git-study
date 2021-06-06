@@ -11,10 +11,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    redirect: '/testOnePage',
     component: Home,
-    // children: [
-      
-    // ]
   },
   {
     path: '/testOnePage',

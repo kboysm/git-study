@@ -2,35 +2,45 @@
     <b-sidebar fixed="top" :no-close-on-route-change="showSidebar" text-variant="white" :width="updateWidth" v-model="showSidebar" bg-variant="dark" no-header>
       <div class="side-bar">
         <b-nav class="side-bar-item side-bar-opt">
-          <b-nav-item class="side-bar-title side-bar-opt">
+          <b-nav-item to="/" link-classes="link-title-color">
+            <div class="side-bar-title side-bar-opt">
+              <div class="side-bar-icon">
+                <b-avatar size="lg"></b-avatar>
+              </div>
+              <div class="title font-weight-bold">테스트스토리</div>
+            </div>
+          </b-nav-item>
+          <b-nav-item to="/testOnePage" link-classes="link-text-color" exact-active-class="active">
+          <div class="side-bar-item side-bar-opt w-100">
             <div class="side-bar-icon">
-            <b-avatar size="lg"></b-avatar>
+              <b-icon-x class="h2"></b-icon-x>
+            </div>
+            <div class="title font-weight-bold">테스트1</div>
           </div>
-          <div class="title">테스트스토리</div>
           </b-nav-item>
-          <b-nav-item class="side-bar-item side-bar-opt" to="/testOnePage" exact exact-active-class="active">
-            <div class="side-bar-icon">
-              <b-icon-x class="h2"></b-icon-x>
+          <b-nav-item link-classes="link-text-color" to="/testTwoPage"  exact-active-class="active">
+            <div class="side-bar-item side-bar-opt w-100">
+              <div class="side-bar-icon">
+                <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
+              </div>
+              <div class="title font-weight-bold"> 테스트2 </div>
             </div>
-            <div class="title">테스트1</div>
           </b-nav-item>
-          <b-nav-item class="side-bar-item side-bar-opt" to="/testTwoPage"  exact-active-class="active">
-            <div class="side-bar-icon">
-              <b-icon-exclamation-circle-fill class="h2"></b-icon-exclamation-circle-fill> 
+          <b-nav-item link-classes="link-text-color" to="/testThreePage"  exact-active-class="active">
+            <div class="side-bar-item side-bar-opt w-100">
+              <div class="side-bar-icon">
+                <b-icon-x class="h2"></b-icon-x>
+              </div>
+              <div class="title font-weight-bold"> 테스트3 </div>
             </div>
-            <div class="title"> 테스트2 </div>
           </b-nav-item>
-          <b-nav-item class="side-bar-item side-bar-opt" to="/testThreePage"  exact-active-class="active">
-            <div class="side-bar-icon">
-              <b-icon-x class="h2"></b-icon-x>
+          <b-nav-item link-classes="link-text-color" to="/testFourPage"  exact-active-class="active">
+            <div class="side-bar-item side-bar-opt w-100">
+              <div class="side-bar-icon">
+                <b-icon-x class="h2"></b-icon-x> 
+              </div>
+              <div class="title font-weight-bold"> 테스트4 </div>
             </div>
-            <div class="title"> 테스트3 </div>
-          </b-nav-item>
-          <b-nav-item class="side-bar-item side-bar-opt" to="/testFourPage"  exact-active-class="active">
-            <div class="side-bar-icon">
-              <b-icon-x class="h2"></b-icon-x> 
-            </div>
-            <div class="title"> 테스트4 </div>
           </b-nav-item>
         </b-nav>
       </div>
@@ -68,12 +78,20 @@ export default {
 <style lang="scss" scoped>
 $sidebar-default-padding-left: 25px;
 $sidebar-active-default-color: #5EBDC5;
+  .link-text-color {
+    text-decoration: none;
+    color: #7F7F83;
+  }
+  .link-title-color {
+    text-decoration: none;
+    color: #fff;
+  }
   .side-bar {
     .side-bar-title {
       height: 90px;
       margin-top:20px;
       margin-bottom:20px;
-      padding:10px;
+      // padding:10px;
     }
     .title {
       margin-left: 8px;
@@ -90,7 +108,7 @@ $sidebar-active-default-color: #5EBDC5;
       justify-content: left;
       align-items: center;
       cursor: pointer;
-      padding-left: 25px;
+      padding-left: 10px;
     }
     // .side-bar-opt:hover {
     //   border: 1px solid $sidebar-active-default-color;
@@ -98,8 +116,8 @@ $sidebar-active-default-color: #5EBDC5;
     .active {
       color: $sidebar-active-default-color;
     }
-    .active::after {
-      position:absolute;
+    .active::before {
+      position: absolute;
       right: 0;
       width:2px;
       height: 50px;
