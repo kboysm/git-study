@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex bg-dark">
+    <div class="d-flex bg-dark" style="position:relative;">
     <div class="stap-1">
       asd
     </div>
@@ -32,15 +32,15 @@
 .stap-1 {
     width: 200px;
     height: 100px;
-    position: absolute;
     background-color: green;
   }
   .stap-2 {
+    position: relative;
     .stap-2-1 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:200px;
+      position:relative;
+      // left:200px;
       border-left: 25px solid green;
       border-right: 0 solid #fff;
       border-top: 25px solid #fff;
@@ -50,21 +50,21 @@
     .stap-2-2 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:200px;
-      top:25px;
+      position:relative;
+      // left:200px;
+      // top:25px;
       border-left: 25px solid green;
       border-right: 25px solid #fff;
-      border-top: 0 solid #fff;
+      // border-top: 0 solid #fff;
       border-bottom: 25px solid green;
       z-index: 10;
     }
     .stap-2-3 {
       width:50px;
       height: 0px;
-      position:absolute;
-      left:200px;
-      top: 50px;
+      position:relative;
+      // left:200px;
+      // top: 50px;
       border-left: 25px solid green;
       border-right: 25px solid #fff;
       border-top: 25px solid green;
@@ -74,9 +74,9 @@
     .stap-2-4 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:200px;
-      top:75px;
+      position:relative;
+      // left:200px;
+      // top:75px;
       border-left: 25px solid green;
       border-right: 0 solid #fff;
       border-top: 0 solid #fff;
@@ -87,28 +87,28 @@
   .stap-3 {
     width:0;
     height: 0;
-    position:absolute;
+    position:relative;
     border-top: 50px solid blue;
     border-bottom: 50px solid blue;
     border-left: 50px solid #fff;
     border-right: 50px solid blue;
-    left:225px;
+    left:-25px;
     z-index:9;
   }
   .stap-4 {
-    width: 200px;
+    width: 150px;
     height: 100px;
-    position: absolute;
+    position: relative;
     background-color: blue;
-    left:300px;
+    left:-25px;
   }
   .stap-5 {
-
+    position:relative;
     .stap-5-1 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:400px;
+      position:relative;
+      left: -25px;
       border-left: 25px solid blue;
       border-right: 0 solid #fff;
       border-top: 25px solid #fff;
@@ -118,9 +118,8 @@
     .stap-5-2 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:400px;
-      top:25px;
+      position:relative;
+      left:-25px;
       border-left: 25px solid blue;
       border-right: 25px solid #fff;
       border-top: 0 solid #fff;
@@ -130,9 +129,8 @@
     .stap-5-3 {
       width:50px;
       height: 0px;
-      position:absolute;
-      left:400px;
-      top: 50px;
+      position:relative;
+      left:-25px;
       border-left: 25px solid blue;
       border-right: 25px solid #fff;
       border-top: 25px solid blue;
@@ -142,9 +140,8 @@
     .stap-5-4 {
       width:50px;
       height: 25px;
-      position:absolute;
-      left:400px;
-      top:75px;
+      position:relative;
+      left:-25px;
       border-left: 25px solid blue;
       border-right: 0 solid #fff;
       border-top: 0 solid #fff;
@@ -155,26 +152,26 @@
   .stap-6 {
     width:0;
     height: 0;
-    position:absolute;
+    position:relative;
     border-top: 50px solid red;
     border-bottom: 50px solid red;
     border-left: 50px solid #fff;
     border-right: 50px solid red;
-    left:425px;
+    left:-50px;
     z-index:9;
   }
   .stap-7 {
     width: 100px;
     height: 100px;
-    position: absolute;
+    position: relative;
     background-color: red;
-    left:500px;
+    left:-50px;
   }
   .stap-8 {
     width: 220px;
     height: 100px;
-    position: absolute;
+    position: relative;
     background-color: black;
-    left: 615px;
+    left: -25px;
   }
 </style>
