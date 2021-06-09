@@ -1,26 +1,12 @@
-<template>
-  <div id="app">
-      <side-navbar></side-navbar>
-      <main-header></main-header>
-      <div class="responsive-width">
-        <div class="responsive-container">
-            <router-view/>
-        </div>
-      </div>
-  </div>
-</template>
-<script>
-import SideNavbar from '@/components/SideNavbar.vue'
-import MainHeader from '@/components/MainHeader.vue'
-export default {
-  components:{
-    SideNavbar,
-    MainHeader
+// 전역에서 사용하는 기본 모달
+.container.default-modal {
+    .description {
+      font-size:13px; letter-spacing:0.2px;margin-bottom:10px;
+    }
   }
-}
-</script>
-<style lang="scss">
-
+  
+  
+  
   .responsive-container {
     display: flex;
     flex-direction: row;
@@ -59,4 +45,3 @@ export default {
   }
   }
   
-</style>
