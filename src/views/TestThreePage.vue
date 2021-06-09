@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-dark" style="width:100vw;height:100vh;">
-        <div>
+    <div class="bg-white" style="width:100vw;height:93.8vh;">
+        <div style="width:100%; height:500px;background-color:red;">
             asldkjal
         </div>
         <div>
@@ -9,19 +9,19 @@
         </div>
     </div>
 </template>
-<style lang="scss">
-//       .responsive-container {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
+<style lang="scss" scoped>
+      .responsive-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   
-//   }
-//   @media screen and (min-width: 1920px) {
-//     .responsive-container {
-//       justify-content: left;
-//       padding: 0 !important;
-//     }
-//   }
+  }
+  @media screen and (min-width: 1920px) {
+    .responsive-container {
+      justify-content: left;
+      padding: 0 !important;
+    }
+  }
   
   
 //   .responsive-width {
