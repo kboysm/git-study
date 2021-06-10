@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-      <side-navbar></side-navbar>
+      <!-- <side-navbar></side-navbar>
       <main-header></main-header>
       <div class="responsive-width">
         <div class="responsive-container">
-            <router-view/>
         </div>
-      </div>
+      </div> -->
+            <router-view/>
   </div>
 </template>
 <script>
