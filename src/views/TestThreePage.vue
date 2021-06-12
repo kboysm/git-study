@@ -1,26 +1,32 @@
 <template>
     <div class="test-container test2">
-        <div class="test-child">
-            <span>A</span> <span>B</span>
+        <div :class="{ 'active': routeTest }">
+            route 테스트 진행 , route경로가 /testThreePage라면 css 효과 부여
         </div>
-        <div class="test-container-main">
-            <span>C</span><span>D</span>
-        </div>
-        <div class="test-child">
-            <span>C</span><span>D</span>
-        </div>
+        
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            routeTest: false
+        }
+    },
+    created() {
+        this.routeTestMethod()
+    },
+    methods: {
+        routeTestMethod() {
+            this.$route.path === '/testThreePage' ? this.routeTest= true : this.routeTest= false
+        }
+    }
+}
+</script>
 <style lang="scss" scoped>
 .test-container {
-    & > .test-child {
+    & > .active {
         color: red;
-    }
-    &-main {
-        color: blue;
-    }
-    &.test2 {
-        background-color:black;
     }
 }
 </style>
