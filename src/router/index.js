@@ -18,8 +18,8 @@ const routes = [
   
  
   {
-    path: '/layout-1',
-    name: 'layout-1',
+    path: '',
+    name: '',
     component: OneLayout,
     children: [
       {
@@ -35,8 +35,8 @@ const routes = [
     ]
   },
   {
-    path: '/layout-2',
-    name: 'layout-2',
+    path: '',
+    name: '',
     component: TwoLayout,
     children: [
       {
