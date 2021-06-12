@@ -1,6 +1,6 @@
 <template>
     <div class="test-container test2">
-        <div :class="{ 'active': routeTest }">
+        <div :class="{ 'active': routeTestMethod }">
             route 테스트 진행 , route경로가 /testThreePage라면 css 효과 부여
         </div>
         
@@ -13,13 +13,14 @@ export default {
             routeTest: false
         }
     },
-    created() {
-        this.routeTestMethod()
-    },
-    methods: {
+    computed: {
         routeTestMethod() {
             this.$route.path === '/testThreePage' ? this.routeTest= true : this.routeTest= false
+            return this.routeTest
         }
+    },
+    methods: {
+        
     }
 }
 </script>
