@@ -10,11 +10,11 @@ import TwoLayout from '@/components/layout/TwoLayout.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home,
-  // },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+  },
   
  
   {
