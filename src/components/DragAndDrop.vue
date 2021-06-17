@@ -37,7 +37,7 @@ export default {
     onDrop( event, listEl) {
       const itemID = event.dataTransfer.getData('itemID')
       console.log( itemID )
-      const item = this.items.find((el)=> el.id == itemID)
+      const item = this.items.find((el)=> el.id == itemID)          
       console.log(item)
       if( item ) {
         item.list = listEl
