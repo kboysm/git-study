@@ -3,7 +3,8 @@
     <!-- <file-shape></file-shape>-->
     <!-- <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute> -->
     <!-- <PromiseTest /> -->
-    <HighlightTest />
+    <!-- <HighlightTest /> -->
+    <ProjectTable />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import FileShape from '@/components/test/FileShape.vue'
 import VirtualSelectorAndCustomAttribute from '@/components/test/VirtualSelectorAndCustomAttribute.vue'
 import PromiseTest from '@/components/PromiseTest.vue'
 import HighlightTest from '@/components/HighlightTest.vue'
+import ProjectTable from '@/components/ProjectTable.vue'
 
 
 export default {
@@ -20,7 +22,8 @@ export default {
     FileShape,
     VirtualSelectorAndCustomAttribute,
     PromiseTest,
-    HighlightTest
+    HighlightTest,
+    ProjectTable
   }
 }
 </script>
