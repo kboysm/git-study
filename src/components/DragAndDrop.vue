@@ -65,4 +65,7 @@ export default {
   .drag-el:nth-last-of-type(1) {
     margin-bottom: 0;
   }
+  .drag-el:active {
+    background-color: red;
+  }
 </style>
