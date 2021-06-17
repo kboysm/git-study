@@ -4,7 +4,8 @@
     <!-- <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute> -->
     <!-- <PromiseTest /> -->
     <!-- <HighlightTest /> -->
-    <ProjectTable />
+    <!-- <ProjectTable /> -->
+    <DragAndDrop />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import VirtualSelectorAndCustomAttribute from '@/components/test/VirtualSelector
 import PromiseTest from '@/components/PromiseTest.vue'
 import HighlightTest from '@/components/HighlightTest.vue'
 import ProjectTable from '@/components/ProjectTable.vue'
+import DragAndDrop from '@/components/DragAndDrop.vue'
 
 
 export default {
@@ -23,7 +25,8 @@ export default {
     VirtualSelectorAndCustomAttribute,
     PromiseTest,
     HighlightTest,
-    ProjectTable
+    ProjectTable,
+    DragAndDrop
   }
 }
 </script>
