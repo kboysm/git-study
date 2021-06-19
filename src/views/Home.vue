@@ -4,8 +4,8 @@
     <!-- <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute> -->
     <!-- <PromiseTest /> -->
     <!-- <HighlightTest /> -->
-    <!-- <ProjectTable /> -->
-    <DragAndDrop />
+    <ProjectTable />
+    <!-- <DragAndDrop /> -->
   </div>
 </template>
 
