@@ -114,7 +114,8 @@ export default {
     margin-top: 50px;
   }
 /deep/ .custom-th-class {
-    background-color: black;
+    background-color: black !important;
+    background: none;
     font-size: 12px;
     border-right: 0px;
     height: 48px;
@@ -134,5 +135,7 @@ export default {
 /deep/ .vgt-responsive table > thead > tr > .vgt-checkbox-col {
     border-right: none !important;
     border-bottom: 1px solid rgb(221, 220, 220);
+    background: none;
+    background-color: black !important;
 }
 </style>
