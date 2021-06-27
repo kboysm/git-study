@@ -4,8 +4,9 @@
     <!-- <virtual-selector-and-custom-attribute></virtual-selector-and-custom-attribute> -->
     <!-- <PromiseTest /> -->
     <!-- <HighlightTest /> -->
-    <ProjectTable />
+    <!-- <ProjectTable /> -->
     <!-- <DragAndDrop /> -->
+    <ObjectArray />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import PromiseTest from '@/components/PromiseTest.vue'
 import HighlightTest from '@/components/HighlightTest.vue'
 import ProjectTable from '@/components/ProjectTable.vue'
 import DragAndDrop from '@/components/DragAndDrop.vue'
+import ObjectArray from '@/components/test/ObjectArray.vue'
 
 
 export default {
@@ -26,7 +28,8 @@ export default {
     PromiseTest,
     HighlightTest,
     ProjectTable,
-    DragAndDrop
+    DragAndDrop,
+    ObjectArray
   }
 }
 </script>
