@@ -1,6 +1,7 @@
 <template>
 	<div id="test-app">
 		<calendar-view 
+		class="custom-calendar"
         @click-date="test"
         >
             <calendar-view-header 
@@ -38,7 +39,7 @@
 		}
 	}
 </script>
-<style>
+<style lang="scss">
 	#test-app {
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		color: #2c3e50;
@@ -46,5 +47,13 @@
 		width: 90vw;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.custom-calendar {
+		& > .cv-header {
+		flex-direction: row-reverse;
+		.periodLabel {
+			width: 100px !important;
+		}
+		}
 	}
 </style>

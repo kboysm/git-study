@@ -6,11 +6,3 @@
         
     </div>
 </template>
-
-<style lang="scss" scoped>
-.test-container {
-    & > .active {
-        color: red;
-    }
-}
-</style>
