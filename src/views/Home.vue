@@ -5,8 +5,8 @@
     <!-- <PromiseTest /> -->
     <!-- <HighlightTest /> -->
     <!-- <ProjectTable /> -->
-    <!-- <DragAndDrop /> -->
-    <ObjectArray />
+    <DragAndDrop />
+    <!-- <ObjectArray /> -->
   </div>
 </template>
 

@@ -6,7 +6,7 @@
       </div>
   </div>
   <div class="drop-zone" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
-      <div v-for="item in getList(2)" :key="item.id" class="drag-el" draggable="true" @dragstart="startDrag( $event, item)">
+      <div @click="eventBubblingTest" v-for="item in getList(2)" :key="item.id" class="drag-el" draggable="true" @dragstart="startDrag( $event, item)">
         {{ item.title}}
       </div>
   </div>
@@ -29,7 +29,7 @@ export default {
       return this.items.filter((item)=> item.list == list)
     },
     startDrag( event, item) {
-      console.log( item.id )
+      console.log( item )
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('itemID', item.id)
@@ -37,11 +37,14 @@ export default {
     onDrop( event, listEl) {
       const itemID = event.dataTransfer.getData('itemID')
       console.log( itemID )
-      const item = this.items.find((el)=> el.id == itemID)          
-      console.log(item)
-      if( item ) {
-        item.list = listEl
-      }
+      // const item = this.items.find((el)=> el.id == itemID)          
+      // console.log(item)
+      // if( item ) {
+      //   item.list = listEl
+      // }
+    },
+    eventBubblingTest() {
+      console.log('test test test')
     }
   }
 }
