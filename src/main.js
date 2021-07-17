@@ -8,6 +8,11 @@ import { BootstrapVue, IconsPlugin, BadgePlugin  } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import TextHighlight from 'vue-text-highlight';
+// import FullCalendar from "vue-full-calendar";
+
+// import "fullcalendar/dist/fullcalendar.min.css";
+Vue.use(require('vue-moment'));
+// Vue.use(FullCalendar);
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 Vue.use(BadgePlugin)

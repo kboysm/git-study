@@ -1,59 +1,63 @@
 <template>
-	<div id="test-app">
-		<calendar-view 
-		class="custom-calendar"
-        @click-date="test"
-        >
-            <calendar-view-header 
-            slot="header" 
-            slot-scope="{ headerProps }" 
-            :header-props="headerProps" 
-            
-            />
-        </calendar-view>
-	</div>
+  <FullCalendar :options="calendarOptions" />
 </template>
 <script>
-	import { CalendarView, CalendarViewHeader } from "vue-simple-calendar"
-	// import "vue-simple-calendar/dist/style.css"
-	// // The next two lines are optional themes
-	import "vue-simple-calendar/static/css/default.css"
-	import "vue-simple-calendar/static/css/holidays-us.css"
+import '@fullcalendar/core/vdom' // solves problem with Vite
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
-	export default {
-		name: 'test-app',
-		data: function() {
-			return { showDate: new Date() }
-		},
-		components: {
-			CalendarView,
-			CalendarViewHeader,
-		},
-		methods: {
-			setShowDate(d) {
-				this.showDate = d;
-			},
-            test( item ) {
-                console.log( item )
-            }
-		}
-	}
+export default {
+  components: {
+    FullCalendar // make the <FullCalendar> tag available
+  },
+  data() {
+    return {
+      calendarOptions: {
+        plugins: [ dayGridPlugin, interactionPlugin ],
+        initialView: 'dayGridMonth',
+        dateClick: this.handleDateClick,
+        events: [
+          { title: 'event 1', start: '2021-07-12T10:30:00', end: '2021-07-12T11:30:00',allDay:true }, //allDay가 있으면 막대기바 , 없으면 점
+          { title: 'event 1', date: '2021-07-01 12:00' },
+          { title: 'event 1', date: '2021-07-01' },
+          { title: 'event 1', date: '2021-07-01' },
+          { title: 'event 1', date: '2021-07-01' },
+          { title: 'event 2', date: '2021-07-02' }
+        ],
+				views: {
+					dayGrid: {
+						dayMaxEventRows: 3 // adjust to 6 only for timeGridWeek/timeGridDay
+					}
+				},
+				buttonText: {
+          today: "오늘",
+        },
+				locale: "ko",
+				headerToolbar: {
+          left: "title prev,today,next",
+          center: "",
+          right: "",
+        },
+				expandRows:true,
+				height:'650px',
+      }
+    }
+  },
+  methods: {
+    handleDateClick: function(arg) {
+      alert('date click! ' + arg.dateStr)
+    }
+  }
+}
 </script>
 <style lang="scss">
-	#test-app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
-		color: #2c3e50;
-		height: 67vh;
-		width: 90vw;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.custom-calendar {
-		& > .cv-header {
-		flex-direction: row-reverse;
-		.periodLabel {
-			width: 100px !important;
-		}
-		}
-	}
+// /deep/ .fc .fc-toolbar.fc-header-toolbar {
+// 	& > .fc-toolbar-chunk {
+// 		& > .title {
+// 			width: 300px;
+// 		}
+// 	}
+
+// } 
 </style>
