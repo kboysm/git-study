@@ -18,29 +18,36 @@ export default {
         initialView: 'dayGridMonth',
         dateClick: this.handleDateClick,
         events: [
-          { title: 'event 1', start: '2021-07-12T10:30:00', end: '2021-07-12T11:30:00',allDay:true }, //allDay가 있으면 막대기바 , 없으면 점
-          { title: 'event 1', date: '2021-07-01 12:00' },
-          { title: 'event 1', date: '2021-07-01' },
-          { title: 'event 1', date: '2021-07-01' },
-          { title: 'event 1', date: '2021-07-01' },
-          { title: 'event 2', date: '2021-07-02' }
+          { title: '', start: '2021-07-12', end: '2021-07-13 01:00:00' }, //allDay가 있으면 막대기바 , 없으면 점
+          { title: '', start: '2021-07-13', end: '2021-07-14',allDay:true }, //allDay가 있으면 막대기바 , 없으면 점
+          { title: '', date: '2021-07-01 12:00' },
+          { title: '', date: '2021-07-01' },
+          { title: '', date: '2021-07-02' },
+          { title: '', date: '2021-07-02' },
+          { title: '', date: '2021-07-02' },
+          { title: '', date: '2021-07-02' },
         ],
 				views: {
 					dayGrid: {
-						dayMaxEventRows: 3 // adjust to 6 only for timeGridWeek/timeGridDay
+						dayMaxEventRows: 3, // adjust to 6 only for timeGridWeek/timeGridDay 이벤트 갯수 설정
+            dayMaxEvents: true // 이벤트가 늘어나도 row의 height가 늘어나지 않도록 설정
 					}
 				},
 				buttonText: {
           today: "오늘",
         },
+        nextDayThreshold: '00:00:00', // 이벤트가 다음날로 넘어가는 최소 시간
 				locale: "ko",
 				headerToolbar: {
-          left: "title prev,today,next",
+          left: "title,prev,today,next",
           center: "",
           right: "",
         },
 				expandRows:true,
-				height:'650px',
+        moreLinkContent: (arg)=> `그 외${arg.num}개...`, // more 버튼 커스텀
+        expandRows: false,
+        contentHeight: 610,
+        displayEventTime: false
       }
     }
   },
@@ -60,4 +67,19 @@ export default {
 // 	}
 
 // } 
+// .fc-event {
+//   padding: 0;
+//   height: 15px;
+// }
+.fc-daygrid-event {
+  height: 10px;
+  font-size: 5px;
+  margin-bottom: 5px;
+}
+.fc-toolbar-title {
+  display: inline-block;
+}
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+}
 </style>
